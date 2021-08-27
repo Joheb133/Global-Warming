@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Global Warming</title>
+        <link rel='shortcut icon' type='image/png' href='img/earth.png'>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+    <nav class='nav-container'>
+            <ul class='menu-area'>
+                <li><a  class="link" href="index.html">Home</a></li>
+                <li><a  class="link" href="causes.html" style='color: #FFDD00'>Causes</a></li>
+                <li><a  class="link" href="effects.html">Effects</a></li>
+                <li><a  class="link" href="solutions.html">Solutions</a></li>
+            </ul>
+    </nav>
+
+    <header class="causes-header">
+
+        <div class="content-wrap">
+            <div class="text">
+                <h1>Causes of Climate Change</h1>
+                <p>Certain gases in the atmosphere block heat from escaping. 
+                Long-lived gases that remain semi-permanently in the atmosphere 
+                and do not respond physically or chemically to changes in the temperature are 
+                described as "forcing" climate change. Gases, sush as water vapour, 
+                which respond physically or chemically to change in temperature are seen as "feedbacks".
+                </p>
+                <p>Gases that contribute to the greenhouse effect include are <span>water vapour</span>, 
+                    <span>nitrous oxide</span>, <span>methane</span> and <span>carbon dioxide</span>
+                </p>
+            </div>
+            <div class="visual">
+                <img src='https://media.giphy.com/media/1lwtquKquRLGwFAQVU/giphy.gif' alt='global warming earth' width='100%'/>
+            </div>
+        </div>
+
+    </header>
+
+    <section class='causes-section'>
+        
+        <div clas="water-vapour">
+            <div class="content-wrap">
+                <div class="text">
+                    <h1>Water vapour</h1>
+                    <p>
+                    The most abundant greenhouse gas, but importantly, it acts as a feedback to the climate. 
+                    Water vapour incresses as the Earth's atmosphere warms, 
+                    but so does the possibility of clouds and precipitation, 
+                    making these some of the most important feedback mechanisims to the greenhouse effect.
+                    </p>
+                    <h1>Chlorofluorocarbons (CFSs)</h1>
+                    <p>
+                    Synthetic compounds entirely of industrial origin used in a number of applications, 
+                    but now largely regulated in production and release to the atmosphere by 
+                    international agreement for their ability to contribute to destruction of the ozone layer. 
+                    They are also greenhouse gases.
+                    </p>
+                </div>
+                <div class="visual">
+                    <div class="grid">
+                        <div class='card-wide' style='background-image:url(img/cloud.jpg)'></div>
+                        <div class='card' style='background-image:url(img/aerosol.jpg)'></div>
+                        <div class='card' style='background-image:url(img/aerosol-bug.jpg)'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="methane">
+            <div class="content-wrap">
+                <div class="text">
+                    <h1>Methane</h1>
+                    <p>
+                    A hydrocarbon gas produced both through natural sources and human activities, 
+                    including the decomposition of wastes in landfills, agriculture, and especially rice cultivation, 
+                    as well as ruminant digestion and manure management associated with domestic livestock. 
+                    On a molecule-for-molecule basis, methane is a far more active greenhouse gas than carbon dioxide, 
+                    but also one which is much less abundant in the atmosphere.
+                    </p>
+                </div>
+                <div class="visual">
+                    <canvas id="methaneGraph"></canvas>
+                    <p>The graph display's annual increases in atmospheric CH4 based on globally averaged marine surface data.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="co2">
+            <div class="content-wrap">
+                <div class="text">
+                    <h1>Carbon dioxide (CO2)</h1>
+                    <p>
+                    Carbon dioxide (CO2) is an important heat-trapping (greenhouse) gas, 
+                    which is released through human activities such as deforestation and burning fossil fuels, 
+                    as well as natural processes such as respiration and volcanic eruptions. 
+                    The first graph shows atmospheric CO2 levels measured at Mauna Loa Observatory, Hawaii, 
+                    in recent years, with average seasonal cycle removed.
+                    </p>
+                </div>
+                <div class="visual">
+                    <canvas id="co2Graph"></canvas>
+                    <p>The graphs show monthly mean carbon dioxide globally averaged over marine surface sites.</p>
+
+                    <img src="co2_model/0.jpg" style='width: 100%;' id='img'/>
+                    <img src='img/bars.jpg' style='width: 100%; margin-top:-4px;'/>
+                    <input type="range" id="slider" value="0.0" min="0" max="171" step="1" class='slider'/>
+                    <p>
+                    The time series below shows global distribution and variation of the concentration of mid-tropospheric 
+                    carbon dioxide in parts per million (ppm). 
+                    The overall color of the map shifts toward the red with advancing time due to the annual increase of CO2.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="n2o">
+            <div class="content-wrap">
+                <div class="text">
+                    <h1>Nitrous Oxide</h1>
+                    <p>
+                    A powerful greenhouse gas produced by soil cultivation practices, 
+                    especially the use of commercial and organic fertilizers, 
+                    fossil fuel combustion, nitric acid production, and biomass burning.
+                    </p>
+                </div>
+                <div class="visual">
+                    <canvas id="n2oGraph"></canvas>
+                    <p>
+                    The graphs show globally-averaged, 
+                    monthly mean atmospheric nitrous oxide abundance determined from marine surface sites.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <nav class="page-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="causes.html">Causes</a></li>
+                <li><a href="effects.html">Effects</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+            </ul>
+        </nav>
+        <nav class="resources">
+            <ul>
+                <li>Resources</li>
+                <li><a href="https://climate.nasa.gov/">Nasa</a></li>
+                <li><a href="https://datahub.io/core/global-temp">Datahub</a></li>
+                <li><a href="https://www.esrl.noaa.gov/gmd/ccgg/trends/global.html">ESRL</a></li>
+            </ul>
+        </nav>
+        <div>
+            Candidate no: <span style='color: rgb(255, 255, 255)'><b>101526</b></span>
+        </div>
+    </footer>
+</body>
+
+<div class="loader-wrapper">
+    <span class='loader'><span class='loader-inner'></span></span>
+</div>

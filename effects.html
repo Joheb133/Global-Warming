@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Global Warming</title>
+        <link rel='shortcut icon' type='image/png' href='img/earth.png'>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+    <nav class='nav-container'>
+            <ul class='menu-area'>
+                <li><a  class="link" href="index.html">Home</a></li>
+                <li><a  class="link" href="causes.html">Causes</a></li>
+                <li><a  class="link" href="effects.html" style="color: #FFDD00">Effects</a></li>
+                <li><a  class="link" href="solutions.html">Solutions</a></li>
+            </ul>
+    </nav>
+
+    <header class='effects-header'>
+        <div class="content-wrap">
+            <div class="text">
+                <h1>Effects of Global Warming</h1>
+                <p>
+                Global climate change has already had observerable effects on the enviroment. 
+                Glaciers have shrunk, ice on rivers and lakes is breaking up earlier, 
+                plant and animal ranges have shifted and trees are flowering sooner.
+                </p>
+                <p>
+                Effects that scientists had predicted in the past would result from global climate change are now occurring: 
+                loss of sea ive, accelerated sea level rise and longer, more intense heat waves. 
+                This is a result of <span>global temperatures rising</span>.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <section class='effects-section'>
+
+        <div class="global-temp">
+            <div class="content-wrap">
+                <div class="text">
+                    <h1>Global Temperature</h1>
+                    <p>
+                    Rising global temperatures have devastating effects. 
+                    Wildfires are more common and have a greater chance of being more deadly and doing more damage. 
+                    Rising sea levels will submerge some areas in water and make floods more common in affected areas.
+                    </p>
+                    <p>
+                    The Earth's average temperature has increased about 1 degree Celsius during the 20th century. 
+                    What's the big deal? One degrees may sound like a small amount, 
+                    but it's an unusual event in our planet's recent history. Earth's climate record, preserved in tree rings, ice cores, 
+                    and coral reefs, shows that the global average temperature is stable over long periods of time. 
+                    Furthermore, small changes in temperature correspond to enormous changes in the environment.
+                    </p>
+                </div>
+                <div class="visual">
+                    <p id='sliderStatus'>1884</p>
+                    <img src="temp_model/0.jpg" style='width: 100%;' id='imgTemp'/>
+                    <input type="range" id="slider" value="0.0" min="0" max="135" step="1" class='slider'/>
+                </div>
+            </div>
+            <div class="content-wrap">
+                <canvas id="GlobalTempGraph"></canvas>
+                <p>
+                Global Temperature Time Series. Data are included from the GISS Surface Temperature (GISTEMP) analysis and the global component of Climate at a Glance (GCAG).
+                <br><br>
+                Click the buttons above the graph to chose the dataset you want to view.
+                </p>
+            </div>
+        </div>
+
+        <div class="fires">
+            <div class="content-wrap">
+                <div class="text">
+                    <h1>Fires</h1>
+                    <p>
+                    Extreme heat and dryness are two important influencers of fire and, on both measures, 
+                    2019 was remarkable for Australia. 
+                    Australia experienced its hottest year on record in 2019, with average temperatures 1.52C above the 1961-1990 average. 
+                    Rising levels of greenhouse gases in the atmosphere change the Earth’s radiation balance, allowing less heat to escape.
+                    </p>
+                </div>
+                <div class="visual">
+                    <iframe width="100%" height='400' src="https://www.youtube.com/embed/MaXDrLOhI_A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="water-levels">
+
+            <div class="content-wrap">
+                <div class="text">
+                    <h1>Sea levels</h1>
+                    <p>
+                    Sea level rise is caused primarily by two factors related to global warming: 
+                    the added water from melting ice sheets and glaciers and the expansion of seawater as it warms.
+                    <br><br>
+                    Global sea level has risen by about 203 millimeters since reliable record keeping began in 1880. 
+                    It is projected to rise another 305 to 1219 mm by 2100.
+                    <br><br>
+                    In the next several decades, storm surges and high tides could combine with sea level rise and land subsidence to further increase flooding in many regions. 
+                    Sea level rise will continue past 2100 because the oceans take a very long time to respond to warmer conditions at the Earth’s surface. 
+                    Ocean waters will therefore continue to warm and sea level will continue to rise for many centuries at rates equal to or higher than those of the current century.
+                    </p>
+                </div>
+                <div class="visual">
+                    <canvas id="SeaLevelGraph"></canvas>
+                    <p>
+                    Global Average Absolute Sea Level Change, 1880-2014 from the US Environmental Protection Agency using data from CSIRO, 2015; NOAA, 2015.
+                    <br><br>
+                    Click the buttons above the graph to chose the dataset you want to view.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-wrap">
+                <div class="text">
+                    <h1>Arctic Sea Ice</h1>
+                    <p>
+                    Arctic sea ice reaches its minimum each September. 
+                    September Arctic sea ice is now declining at a rate of 12.85 percent per decade, 
+                    relative to the 1981 to 2010 average.
+                    </p>
+                </div>
+                <div class="visual">
+                    <canvas id="ArcticSeaIceGraph"></canvas>
+                    <p>
+                    This graph shows the average monthly 
+                    Arctic sea ice extent each September since 1979, derived from satellite observations.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="droughts">
+            <div class="content-wrap">
+                <div class="text">
+                    <h1>Droughts</h1>
+                    <p>
+                    Droughts in the Southwest and heat waves (periods of abnormally hot weather lasting days to weeks) everywhere are projected to become more intense, 
+                    and cold waves less intense everywhere.
+                    <br><br>
+                    Summer temperatures are projected to continue rising, and a reduction of soil moisture, 
+                    which exacerbates heat waves, is projected for much of the western and central U.S. in summer. 
+                    By the end of this century, 
+                    what have been once-in-20-year extreme heat days (one-day events) are projected to occur every two or three years over most of the nation.
+                    </p>
+                </div>
+                <div class="visual">
+                    <iframe width="100%" height='400' src="https://www.youtube.com/embed/aNgLxidcsWE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <nav class="page-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="causes.html">Causes</a></li>
+                <li><a href="effects.html">Effects</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+            </ul>
+        </nav>
+        <nav class="resources">
+            <ul>
+                <li>Resources</li>
+                <li><a href="https://climate.nasa.gov/">Nasa</a></li>
+                <li><a href="https://datahub.io/core/global-temp">Datahub</a></li>
+                <li><a href="https://www.esrl.noaa.gov/gmd/ccgg/trends/global.html">ESRL</a></li>
+            </ul>
+        </nav>
+        <div>
+            Candidate no: <span style='color: rgb(255, 255, 255)'><b>101526</b></span>
+        </div>
+    </footer>
+</body>
+
+<div class="loader-wrapper">
+    <span class='loader'><span class='loader-inner'></span></span>
+</div>
