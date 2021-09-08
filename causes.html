@@ -3,10 +3,6 @@
     <head>
         <title>Global Warming</title>
         <link rel='shortcut icon' type='image/png' href='img/earth.png'>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="script.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +15,11 @@
                 <li><a  class="link" href="effects.html">Effects</a></li>
                 <li><a  class="link" href="solutions.html">Solutions</a></li>
             </ul>
+            <svg class="burger" width="28" height="28">
+                <line class="line1" x1="0" y1="4" x2="28" y2="4" style="stroke:white; stroke-width: 2;" />
+                <line class="line2" x1="0" y1="14" x2="28" y2="14" style="stroke:white; stroke-width: 2;" />
+                <line class="line3" x1="0" y1="24" x2="28" y2="24" style="stroke:white; stroke-width: 2;" />
+            </svg>
     </nav>
 
     <header class="causes-header">
@@ -167,3 +168,11 @@
 <div class="loader-wrapper">
     <span class='loader'><span class='loader-inner'></span></span>
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="visuals.js"></script>
+<script src="ui.js"></script>
+</html>

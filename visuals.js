@@ -1,8 +1,3 @@
-// loader
-$(window).on("load",function(){
-    $(".loader-wrapper").fadeOut("slow");
-});
-
 //---------------------Methane Graph---------------------//
 var methaneConfig = { //variable
 
