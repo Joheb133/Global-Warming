@@ -86,6 +86,22 @@ h1{
         padding: 32px 0 16px 0;
     }
 }
+@media only screen and (max-width: 686px){
+    h1{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .content-wrap{
+        max-width: 425px;    
+    }
+}
+@media only screen and (max-width: 425px){
+    .content-wrap{
+        max-width: 320px;    
+    }
+}
 
 
 /* Navigation */
@@ -134,7 +150,7 @@ h1{
         right: 0;
         height: 100vh;
         width: 50%;
-        top: 40px;
+        top: 0px;
         transform: translate(100%);
         transition: transform 0.5s ease-in;
     }
@@ -220,6 +236,9 @@ footer li a{
     font-size: 40px;
     color: #ffffff;
 }
+.landing-text svg{
+    animation: arrow 4s;
+}
 @keyframes arrow{
     0%{
         transform: translate(0, 0px);
@@ -237,11 +256,30 @@ footer li a{
         transform: translate(0, 0px);
     }
 }
-
-.landing-text svg{
-    animation: arrow 4s;
+@media only screen and (max-width: 1024px){
+    .landing-text h1{
+        font-size: 80px;
+    }
+    .landing-text p{
+        font-size: 32px;
+    }
+    .landing-text svg{
+        width: 104px;
+        height: 104px;
+    }
 }
-
+@media only screen and (max-width: 686px){
+    .landing-text h1{
+        font-size: 56px;
+    }
+    .landing-text p{
+        font-size: 16px;
+    }
+    .landing-text svg{
+        width: 65px;
+        height: 65px;
+    }
+}
 /* Section */
 .home-section{
     width: 100%;
